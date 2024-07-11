@@ -31,8 +31,11 @@ public class HelloController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         datePicker.setTooltip(new Tooltip("If you typed a date with the keyboard, remember to press Enter!"));
+
+        squadSelection.setValue("alpha");
         squadSelection.getItems().addAll(squads);
         squadSelection.setOnAction(this::getSelectedSquad);
+
         datePicker.setOnAction(this::getPickedDate);
 //        pickedDate = this::getPickedDate;
     }
